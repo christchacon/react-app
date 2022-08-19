@@ -37,7 +37,7 @@ export const AddCategories = ( { onNewCategory } ) => {//setCategories antes
                 onChange= { (event) => inputChange( event )} //Se puede usar solo la referencia a la función. es necesario este evento en el input HTML para manejar el evento 
             />
         </form>
-        <button aria-label="btn-reset" onClick={ onResetInput }>Reset</button>
+        <button aria-label="btn-reset" onClick={ onResetInput }>Reset textbox</button>
     </>
   )
 }

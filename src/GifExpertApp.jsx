@@ -30,7 +30,7 @@ import { GifGrid, AddCategories } from './Components';
             <AddCategories onNewCategory={ ( newCategory ) => onAddCategory( newCategory ) } />{/* props onNewCategory es un función que recibe el valor de la categoria */}
             {/*<button aria-label="btn-addNewCategory" onClick={ onAddCategory }>New category</button>*/}
             <div>
-                <button aria-label="btn-reset" onClick={ onResetCategories }>Reset</button>
+                <button aria-label="btn-reset" onClick={ onResetCategories }>Reset categories</button>
                 {/* Lista de categories */}
                 {
                     categories.map( ( category ) => 
