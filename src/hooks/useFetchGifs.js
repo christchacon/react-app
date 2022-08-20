@@ -8,6 +8,8 @@ export const useFetchGifs = ( category ) => {
     const [ isLoading, setIsLoading ] = useState( true );
    
     //Función que llama a función de consumo API
+    console.log(`useFetchGifs`);
+    console.log(category);
     const onListImages = async () =>{
         setlistImages( await getGifs( category ) );7
         setIsLoading( false );
