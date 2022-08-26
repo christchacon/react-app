@@ -2,12 +2,12 @@ import { useState } from "react"
 
 export const AddCategories = ( { onNewCategory } ) => {//setCategories antes
   
-    const [ inputCategoryValue, setInpuntCategoryValue ] = useState( '' );//Para manejar el estado real del componente
+    const [ inputCategoryValue, setInputCategoryValue ] = useState( '' );//Para manejar el estado real del componente
     const [ inputCantValue, setInputCantValue ] = useState( '' );//Para manejar el estado real del componente
     
 
     const inputCategoryChange = (event) => {
-        setInpuntCategoryValue(event.target.value);
+        setInputCategoryValue(event.target.value);
     }
 
     const inputCantChange = (event) => {
@@ -29,11 +29,13 @@ export const AddCategories = ( { onNewCategory } ) => {//setCategories antes
             quantity: inputCantValue.trim()
         }
         onNewCategory( criteriaSearch );
-        setInpuntCategoryValue( '' );
+        setInputCategoryValue( '' );
+        setInputCantValue('');
+
     }
 
     const onResetInput = () =>{
-        setInpuntCategoryValue( '' );
+        setInputCategoryValue( '' );
         setInputCantValue( '' );
         //console.log( 'OnResetInput' );
     }
@@ -41,7 +43,7 @@ export const AddCategories = ( { onNewCategory } ) => {//setCategories antes
     return (
     
     <>
-        <form onSubmit={ onSubmit }>
+        <form>
         
             <input 
                 type="text"
