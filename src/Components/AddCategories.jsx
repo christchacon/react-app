@@ -11,7 +11,9 @@ export const AddCategories = ( { onNewCategory } ) => {//setCategories antes
     }
 
     const inputCantChange = (event) => {
-        setInputCantValue(event.target.value);
+        
+        if(/^[0-9]+$/.test(event.target.value)) setInputCantValue(event.target.value);
+    
     }
 
     const onSubmit = (event) =>{
@@ -20,7 +22,7 @@ export const AddCategories = ( { onNewCategory } ) => {//setCategories antes
         // console.log( inputCategoryValue );
         // console.log( inputCantValue );
         //onAddCategory.useState.setCategories( categories.concat( inputValue ) )
-        if(inputCategoryValue.trim().length <= 1 || inputCantValue.trim().length <= 0 ) return;
+        if(inputCategoryValue.trim().length <= 1 || inputCantValue.trim().length <= 0 || isNaN( inputCantValue )) return;
         //setCategories( categories => categories.concat( inputValue ) );
         const criteriaSearch = {
             category: inputCategoryValue.trim(),
@@ -33,7 +35,7 @@ export const AddCategories = ( { onNewCategory } ) => {//setCategories antes
     const onResetInput = () =>{
         setInpuntCategoryValue( '' );
         setInputCantValue( '' );
-        console.log( 'OnResetInput' );
+        //console.log( 'OnResetInput' );
     }
 
     return (

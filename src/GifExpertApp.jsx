@@ -10,7 +10,7 @@ import { GifGrid, AddCategories } from './Components';
         
         const onAddCategory = ( criteriaCategory ) =>{
             //const newCategory = 'Samuray X';
-            console.log( criteriaCategory );
+            //console.log( criteriaCategory );
             if( categories.includes( criteriaCategory )) return;
             //setCategories( categories.concat( newCategory ));
             //console.log( categories );

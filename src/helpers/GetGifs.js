@@ -3,7 +3,7 @@
 export const getGifs = async ( category ) => {
     const apiKey = 'PFSRgy1iodUdm1OHY2It6phRvuthIum8';
     //const count = category.quantity;
-    console.log(`getGifs category:`);
+    //console.log(`getGifs category:`);
     // console.log(category);
     // console.log(quantity);
     const urlSearchGif = `https://api.giphy.com/v1/gifs/search?api_key=${ apiKey }&q=${ category.category }&limit=${ category.quantity }`;
