@@ -12,8 +12,13 @@ export const AddCategories = ( { onNewCategory } ) => {//setCategories antes
 
     const inputCantChange = (event) => {
         
-        if(/^[0-9]+$/.test(event.target.value)) setInputCantValue(event.target.value);
-    
+        // if(/^[0-9]+$/.test(event.target.value)){
+        //     setInputCantValue(event.target.value);// /^[0-9]-+$/ /^-?\d+$/cons
+        //     console.log(event.target);
+        // }else if(event.target.value.length == 0){
+        //     setInputCantValue(event.target.value);
+        // }
+        if(/^[0-9]*$/.test(event.target.value)) setInputCantValue(event.target.value);
     }
 
     const onSubmit = (event) =>{
